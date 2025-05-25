@@ -1,0 +1,117 @@
+/* o asterisco serve pra aplicar em tudo da página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Header e Menu */
+header {
+  background-color: #3e8e41;
+  padding: 1rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+/* pro botão mudar de cor */
+.nav-link::before {
+  content: "🧱";
+  margin-right: 6px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #9b6941;
+  border-radius: 5px;
+}
+
+/* Página principal */
+main {
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.intro {
+  max-width: 800px;
+  background-color: #2c2c2c;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+/* Editando o h4 da pagina */
+.intro h1 {
+  color: #7ec850;
+  font-family: 'Pixelify Sans', sans-serif; /* não consegui aplicar a fonte nem por reza */
+  margin-bottom: 1rem;
+}
+
+/* editando pra imagem não sair da caixa */
+.intro img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 2rem;
+}
+
+/* Barra no fim do site, rodapé não lembro o nome */
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* botão que manda pro site de paletas*/
+.botaoSite {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Parte que faz o site ficar responsivo */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
